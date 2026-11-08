@@ -100,7 +100,8 @@ def load_and_clean(folder):
     # 4. missing or impossible numbers
     bad_qty = data["qty"].isna() | (data["qty"] <= 0)
     for _, r in data[bad_qty].iterrows():
-        issues.append((r.source_file, r.source_row, "Missing or negative quantity", f"value {r.qty}; row removed"))
+        issues.append((r.source_file, r.source_row, "Missing quantity" if pd.isna(r.qty) else "Negative quantity",
+                       "row removed" if pd.isna(r.qty) else f"value {int(r.qty)}; row removed"))
     data = data[~bad_qty]
     no_price = data["price"].isna()
     medians = data.groupby("product")["price"].median()

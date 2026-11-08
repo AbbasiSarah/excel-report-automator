@@ -2,6 +2,8 @@
 
 **Turn a folder of messy Excel files into one clean, formatted report in seconds.**
 
+▶ [Watch the 48-second demo](https://abbasisarah.github.io/assets/videos/demo-excel-report-automator.mp4)
+
 Many businesses get a spreadsheet from every branch, every month. Each one is a little different: other column names, three date formats, extra spaces, duplicate rows, missing prices and typos. Someone spends hours every month copying, fixing and making charts.
 
 This script does it in one command, and it **logs every fix** so nothing changes silently.
